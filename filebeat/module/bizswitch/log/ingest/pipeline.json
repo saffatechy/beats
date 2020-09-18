@@ -1,0 +1,28 @@
+{
+  "description": "Pipeline for parsing bizswitch log logs",
+  "processors": [ {
+	"set": {
+	  "field": "event.ingested",
+	  "value": "{{_ingest.timestamp}}"
+	},
+        "grok": {
+          "field": "message",
+          "patterns":
+["%{TIMESTAMP_ISO8601:timestamp} %{LOGLEVEL:loglevel} (%{SPACE})?(?<thread>(%{IP}[:]%{INT})?(-)?(Thread-%{INT})?(\\(%{INT}\\)-)?%{WORD}(:%{WORD})?([\\-])?(%{SPACE})?(([a-zA-Z]+)?(%{SPACE})?(%{WORD})?([:])?)(%{INT})?([:])?(%{INT})?([\\-])?(%{INT})?) \\[%{WORD:category}\\] %{GREEDYDATA:bizlog}"],
+          "ignore_missing":  true
+          }
+        },
+        {
+          "remove": {
+            "field": "message"
+          }
+        }
+    ],
+  "on_failure" : [{
+    "set" : {
+      "field" : "error.message",
+      "value" : "{{ _ingest.on_failure_message }}"
+    }
+  }]
+}
+

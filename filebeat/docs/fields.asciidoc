@@ -20,6 +20,7 @@ grouped in the following categories:
 * <<exported-fields-azure>>
 * <<exported-fields-barracuda>>
 * <<exported-fields-beat-common>>
+* <<exported-fields-bizswitch>>
 * <<exported-fields-bluecoat>>
 * <<exported-fields-cef>>
 * <<exported-fields-cef-module>>
@@ -8782,6 +8783,72 @@ alias to: agent.name
 Time series instance id
 
 type: keyword
+
+--
+
+[[exported-fields-bizswitch]]
+== bizswitch fields
+
+bizswitch Module
+
+
+
+[float]
+=== bizswitch
+
+
+
+
+*`bizswitch.timestamp`*::
++
+--
+Please add description
+
+example: Please add example
+
+--
+
+*`bizswitch.loglevel`*::
++
+--
+Please add description
+
+type: keyword
+
+example: Please add example
+
+--
+
+*`bizswitch.thread`*::
++
+--
+Please add description
+
+type: keyword
+
+example: Please add example
+
+--
+
+*`bizswitch.category`*::
++
+--
+Please add description
+
+type: keyword
+
+example: Please add example
+
+--
+
+*`bizswitch.bizlog`*::
++
+--
+Please add description
+
+type: text
+
+example: Please add example
 
 --
 

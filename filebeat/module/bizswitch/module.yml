@@ -1,0 +1,3 @@
+dashboards:
+- id: Filebeat-bizswitch-log-Dashboard
+  file: Filebeat-bizswitch-log.json

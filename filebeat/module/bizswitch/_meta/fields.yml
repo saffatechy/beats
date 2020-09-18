@@ -1,0 +1,9 @@
+- key: bizswitch
+  title: "bizswitch"
+  description: >
+    bizswitch Module
+  fields:
+    - name: bizswitch
+      type: group
+      description: >
+      fields:
