@@ -1,19 +1,19 @@
 - name: timestamp
   description: Please add description
   example: Please add example
-- name: loglevel
+- name: level
   description: Please add description
   example: Please add example
   type: keyword
-- name: thread
+- name: bizswitch.thread
+  description: BizSwitch Thread
+  example: Timer-21
+  type: keyword
+- name: bizswitch.category
   description: Please add description
   example: Please add example
   type: keyword
-- name: category
-  description: Please add description
-  example: Please add example
-  type: keyword
-- name: bizlog
+- name: message
   description: Please add description
   example: Please add example
   type: text

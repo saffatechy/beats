@@ -8,13 +8,21 @@
         "grok": {
           "field": "message",
           "patterns":
-["%{TIMESTAMP_ISO8601:timestamp} %{LOGLEVEL:loglevel} (%{SPACE})?(?<thread>(%{IP}[:]%{INT})?(-)?(Thread-%{INT})?(\\(%{INT}\\)-)?%{WORD}(:%{WORD})?([\\-])?(%{SPACE})?(([a-zA-Z]+)?(%{SPACE})?(%{WORD})?([:])?)(%{INT})?([:])?(%{INT})?([\\-])?(%{INT})?) \\[%{WORD:category}\\] %{GREEDYDATA:bizlog}"],
+	["%{TIMESTAMP_ISO8601:_tmp.timestamp} %{LOGLEVEL:log.level} (%{SPACE})?(?<bizswitch.thread>(%{IP}[:]%{INT})?(-)?(Thread-%{INT})?(\\(%{INT}\\)-)?%{WORD}(:%{WORD})?([\\-])?(%{SPACE})?(([a-zA-Z]+)?(%{SPACE})?(%{WORD})?([:])?)(%{INT})?([:])?(%{INT})?([\\-])?(%{INT})?) \\[%{WORD:bizswitch.category}\\] %{GREEDYDATA:message}"],
           "ignore_missing":  true
           }
         },
+       {
+         "date": {
+            "field": "_tmp.timestamp",
+            "target_field": "@timestamp",
+            "formats": ["yyyy-MM-dd HH:mm:ss,SSS"],
+            "timezone": "{{ event.timezone }}"
+          }
+       },
         {
           "remove": {
-            "field": "message"
+		"field": "_tmp"
           }
         }
     ],

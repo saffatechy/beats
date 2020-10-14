@@ -8808,7 +8808,7 @@ example: Please add example
 
 --
 
-*`bizswitch.loglevel`*::
+*`bizswitch.level`*::
 +
 --
 Please add description
@@ -8819,7 +8819,18 @@ example: Please add example
 
 --
 
-*`bizswitch.thread`*::
+*`bizswitch.bizswitch.thread`*::
++
+--
+BizSwitch Thread
+
+type: keyword
+
+example: Timer-21
+
+--
+
+*`bizswitch.bizswitch.category`*::
 +
 --
 Please add description
@@ -8830,18 +8841,7 @@ example: Please add example
 
 --
 
-*`bizswitch.category`*::
-+
---
-Please add description
-
-type: keyword
-
-example: Please add example
-
---
-
-*`bizswitch.bizlog`*::
+*`bizswitch.message`*::
 +
 --
 Please add description

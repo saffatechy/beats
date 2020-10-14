@@ -32,5 +32,5 @@ func init() {
 // AssetBizswitch returns asset data.
 // This is the base64 encoded gzipped contents of module/bizswitch.
 func AssetBizswitch() string {
-	return "eJzEkEFuAjEMRfc5xRd7LpBFb1CpVwiT38HCIVFiCuH0FRWloXRbJstn5/nba+zYPTZybkexaesAE1N6rG5s5YDINlUpJnnv8eIA/PzBa44HpQPehRqb/yqvsQ+J9+rLs17oMdd8KFfyh/teNepMEpuFVG6VX4I3ZWhEiHHkQzdPIZXLhkPnlT1M0zwrP6j/Ouz7Jjv2Y67xceVtZYiLRpiCcc61LxpiI2fN81MiGE/mPgMAAP//ws3rjw=="
+	return "eJzEkbFOAzEQRHt/xSj9IUHpgoIeCYn8gDkPl1Xs2LI3JJevR4FwODlokACXs+s343GHNUeLJznUnWi/MoCKBlosJm1hAM/aF8kqaWNxawB83sF98ttAAzwLg6/2bdxh4yLP0cejY6bFUNI2n5Qv2OeoFqcSWdXFPE0uAA+BrhLO+1Zvtrl3MR9f2GyetJlb4AvDrzp9FLLmuEvFzxJM9V3pqtD578LcyeHx/TeWl3tTjKVElu7m+gfmvVMOqYz/2kVkrW7gn2RQ7tW8BgAA//9WjOw/"
 }
